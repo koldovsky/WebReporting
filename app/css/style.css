@@ -1,0 +1,19 @@
+body,div, h1, h2{
+    margin: 0px;
+    padding: 0px;
+}
+#header{
+    background-color: #808080;
+}
+#miniCalendar{
+    background-color: orangered;
+    height: 500px;
+}
+#main{
+    background-color: orange;
+    height: 500px;
+}
+#view{
+    background-color: green;
+    height: 400px;
+}
