@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Local Web Reporting</title>
+    <script src="app/lib/angular/angular.min.js"></script>
+
+    <link href="app/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="app/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="app/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="app/js/app.js"></script>
+    <script src="app/js/controllers/DayController.js"></script>
+    <script src="app/js/controllers/WeekController.js"></script>
+    <script src="app/js/controllers/MonthController.js"></script>
+    <script src="app/js/controllers/NavigationController.js"></script>
+</head>
+<body ng-app="MyApp">
+<div class="row">
+    <div id="header" class="col-md-12">
+        <h1>This is Header</h1>
+    </div>
+</div>
+<div class="row">
+    <div id="body">
+        <div id="miniCalendar" class="col-md-4">
+            <h1>This is mini calendar</h1>
+        </div>
+
+        <div id="main" class="col-md-8">
+            <div id="navigationPanel" ng-controller="NavigationController">
+                <button ng-click="go('/day')"> Day </button>
+                <button ng-click="go('/week')"> Week </button>
+                <button ng-click="go('/month')"> Month </button>
+            </div>
+
+            <div ng-view id="view">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
