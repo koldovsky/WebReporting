@@ -2,8 +2,20 @@ body,div, h1, h2{
     margin: 0px;
     padding: 0px;
 }
+
+#body{
+	padding-top: 48px;
+}
+#logo{
+	font-size: 30px;
+	color: white;
+}
+#settings{
+	background-color: #3A5795;
+}
 #header{
-    background-color: #808080;
+    background-color: #3A5795;
+    border: none;
 }
 #miniCalendar{
     background-color: orangered;
@@ -16,4 +28,12 @@ body,div, h1, h2{
 #view{
     background-color: green;
     height: 400px;
+}
+#navigationPanel{
+	padding-top: 5px;
+	height: 30px;
+}
+.logo{
+	display: inline ;
+	padding-top: 8px;
 }

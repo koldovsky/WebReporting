@@ -17,8 +17,17 @@
 </head>
 <body ng-app="MyApp">
 <div class="row">
-    <div id="header" class="col-md-12">
-        <h1>This is Header</h1>
+    <div  class="col-md-12">
+        <div class="navbar navbar-fixed-top navbar-inverse" id="header">
+            <div class="container">
+                <div class="logo">
+                    <span  id ="logo">Local Web Reporting</span>
+                </div>
+                <div class="logo nav navbar-nav pull-right">
+                    <button type="button" class="btn btn-default" id = "settings">Settings</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <div class="row">
@@ -29,13 +38,18 @@
 
         <div id="main" class="col-md-8">
             <div id="navigationPanel" ng-controller="NavigationController">
-                <button ng-click="go('/day')"> Day </button>
-                <button ng-click="go('/week')"> Week </button>
-                <button ng-click="go('/month')"> Month </button>
+                <div class="btn-group pull-right" role="group" aria-label="...">
+                    <button ng-click="go('/day')" type="button" class="btn btn-default">Day</button>
+                    <button ng-click="go('/week')" type="button" class="btn btn-default">Week</button>
+                    <button ng-click="go('/month')" type="button" class="btn btn-default">Month</button>
+                </div>
             </div>
-
-            <div ng-view id="view">
-            </div>
+            <ul class="nav nav-tabs" id = "tabs">
+                    <li role="presentation" class="active"><a href="#">Planning</a></li>
+                    <li role="presentation"><a href="#">Reporting</a></li>
+                    <div ng-view id="view">
+                        </div>
+            </ul>
         </div>
     </div>
 </div>
