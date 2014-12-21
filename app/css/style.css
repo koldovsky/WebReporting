@@ -17,6 +17,9 @@ body,div, h1, h2{
     background-color: #3A5795;
     border: none;
 }
+#period_choice{
+	padding-left: 30px;
+}
 #miniCalendar{
     background-color: orangered;
     height: 500px;
@@ -36,4 +39,7 @@ body,div, h1, h2{
 .logo{
 	display: inline ;
 	padding-top: 8px;
+}
+.buttons{
+	display: inline;
 }

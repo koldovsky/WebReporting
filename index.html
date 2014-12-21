@@ -38,12 +38,17 @@
 
         <div id="main" class="col-md-8">
             <div id="navigationPanel" ng-controller="NavigationController">
-                <div class="btn-group pull-right" role="group" aria-label="...">
+                <div class="btn-group pull-right buttons" id = "period_choice" role="group" aria-label="...">
                     <button ng-click="go('/day')" type="button" class="btn btn-default">Day</button>
                     <button ng-click="go('/week')" type="button" class="btn btn-default">Week</button>
                     <button ng-click="go('/month')" type="button" class="btn btn-default">Month</button>
                 </div>
-                <ul class="nav nav-tabs" id = "tabs">
+                <div class="btn-group pull-right buttons" id = "today_choice" role="group" aria-label="...">
+                    <button  type="button" class="btn btn-default"><</button>
+                    <button  type="button" class="btn btn-default">Today</button>
+                    <button  type="button" class="btn btn-default">></button>
+                </div>
+                <ul class="nav nav-tabs buttons" id = "tabs" >
                     <li role="presentation" class="active"><a href="#">Planning</a></li>
                     <li role="presentation"><a href="#">Reporting</a></li>
                 </ul>
