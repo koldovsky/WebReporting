@@ -24,6 +24,13 @@ body,div, h1, h2{
     background-color: orangered;
     height: 500px;
 }
+#create_task{
+	background-color: orangered;
+}
+#today_choice{
+	position: relative;
+	left: 5em;
+}
 #main{
     background-color: orange;
     height: 500px;
@@ -39,4 +46,7 @@ body,div, h1, h2{
 .logo{
 	display: inline ;
 	padding-top: 8px;
+}
+.buttons{
+	display: inline;
 }
