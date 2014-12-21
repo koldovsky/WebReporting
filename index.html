@@ -14,6 +14,9 @@
     <script src="app/js/controllers/WeekController.js"></script>
     <script src="app/js/controllers/MonthController.js"></script>
     <script src="app/js/controllers/NavigationController.js"></script>
+    <script src="app/js/controllers/MiniCalendarController.js"></script>
+
+    <script src="app/js/sevices/MiniCalendarService.js"></script>
 </head>
 <body ng-app="MyApp">
 <div class="row">
@@ -32,12 +35,33 @@
 </div>
 <div class="row">
     <div id="body">
-        <div id="miniCalendar" class="col-md-4">
+        <div id="calendar" class="col-md-3" ng-controller="MiniCalendarController">
             <h1>This is mini calendar</h1>
             <button type="button" class="btn btn-default">New task</button>
+
+            <div id="miniCalendar">
+                <h3>{{currentDate.year}}</h3>
+                <h3>{{currentDate.month.name}}</h3>
+                <table class="table table-hover table-bordered">
+                    <thead>
+                    <tr>
+                        <th ng-repeat="day in days" class="info">{{day.name}}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="week in calendarDays">
+                        <td id="miniCalendarDay" ng-repeat="day in week" class="col-md-1 active">
+                            <div>
+                                {{day}}
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
-        <div id="main" class="col-md-8">
+        <div id="main" class="col-md-9">
             <div id="navigationPanel" ng-controller="NavigationController">
                 <div class="btn-group pull-right" role="group" aria-label="...">
                     <button ng-click="go('/day')" type="button" class="btn btn-default">Day</button>

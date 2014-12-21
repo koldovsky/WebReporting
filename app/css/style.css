@@ -6,6 +6,9 @@ body,div, h1, h2{
 #body{
 	padding-top: 48px;
 }
+#miniCalendar{
+    background-color: #ffff00;
+}
 #logo{
 	font-size: 30px;
 	color: white;
@@ -17,7 +20,7 @@ body,div, h1, h2{
     background-color: #3A5795;
     border: none;
 }
-#miniCalendar{
+#calendar{
     background-color: orangered;
     height: 500px;
 }
