@@ -33,26 +33,29 @@
 <div class="row">
     <div id="body">
         <div id="miniCalendar" class="col-md-4">
+            <button type="button" id = "create_task" class="btn btn-default btn-lg btn-block">New task</button>
             <h1>This is mini calendar</h1>
-            <button type="button" class="btn btn-default">New task</button>
         </div>
 
         <div id="main" class="col-md-8">
             <div id="navigationPanel" ng-controller="NavigationController">
+                <div id= "tabs_container" class="col-md-4">
+                    <ul class="nav nav-tabs buttons" id = "tabs" >
+                        <li role="presentation" class="active"><a href="#">Planning</a></li>
+                        <li role="presentation"><a href="#">Reporting</a></li>
+                    </ul>
+                </div>
+
                 <div class="btn-group pull-right buttons" id = "period_choice" role="group" aria-label="...">
                     <button ng-click="go('/day')" type="button" class="btn btn-default">Day</button>
                     <button ng-click="go('/week')" type="button" class="btn btn-default">Week</button>
                     <button ng-click="go('/month')" type="button" class="btn btn-default">Month</button>
                 </div>
-                <div class="btn-group pull-right buttons" id = "today_choice" role="group" aria-label="...">
+                <div class="btn-group buttons" id = "today_choice" role="group" aria-label="...">
                     <button  type="button" class="btn btn-default"><</button>
                     <button  type="button" class="btn btn-default">Today</button>
                     <button  type="button" class="btn btn-default">></button>
                 </div>
-                <ul class="nav nav-tabs buttons" id = "tabs" >
-                    <li role="presentation" class="active"><a href="#">Planning</a></li>
-                    <li role="presentation"><a href="#">Reporting</a></li>
-                </ul>
             </div>
                 <div ng-view id="view">
                 </div>

@@ -17,12 +17,16 @@ body,div, h1, h2{
     background-color: #3A5795;
     border: none;
 }
-#period_choice{
-	padding-left: 30px;
-}
 #miniCalendar{
     background-color: orangered;
     height: 500px;
+}
+#create_task{
+	background-color: orangered;
+}
+#today_choice{
+	position: relative;
+	left: 5em;
 }
 #main{
     background-color: orange;
