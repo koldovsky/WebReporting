@@ -20,7 +20,7 @@
 </head>
 <body ng-app="MyApp">
 <div class="row">
-    <div  class="col-md-12">
+    <div  class="col-xs-12">
         <div class="navbar navbar-fixed-top navbar-inverse" id="header">
             <div class="container">
                 <div class="logo">
@@ -35,9 +35,8 @@
 </div>
 <div class="row">
     <div id="body">
-        <div id="calendar" class="col-md-3" ng-controller="MiniCalendarController">
+        <div id="calendar" class="col-xs-3" ng-controller="MiniCalendarController">
             <button type="button" id = "create_task" class="btn btn-default btn-lg btn-block">New task</button>
-            <h1>This is mini calendar</h1>
 
             <div id="miniCalendar">
                 <h3>{{currentDate.year}}</h3>
@@ -50,7 +49,7 @@
                     </thead>
                     <tbody>
                     <tr ng-repeat="week in calendarDays">
-                        <td id="miniCalendarDay" ng-repeat="day in week" class="col-md-1 active">
+                        <td id="miniCalendarDay" ng-repeat="day in week" class="col-xs-1 active">
                             <div>
                                 {{day}}
                             </div>
@@ -61,9 +60,9 @@
             </div>
         </div>
 
-        <div id="main" class="col-md-9">
+        <div id="main" class="col-xs-9">
             <div id="navigationPanel" ng-controller="NavigationController">
-                <div id= "tabs_container" class="col-md-4">
+                <div id= "tabs_container" class="col-xs-4">
                     <ul class="nav nav-tabs buttons" id = "tabs" >
                         <li role="presentation" class="active"><a href="#">Planning</a></li>
                         <li role="presentation"><a href="#">Reporting</a></li>
